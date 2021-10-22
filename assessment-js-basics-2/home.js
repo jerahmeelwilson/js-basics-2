@@ -23,7 +23,9 @@
 
 //CODE HERE
 
+const greetUser =  (username) => `Welcome back, ${username}.`;
 
+// console.log(greetUser("Andrew"));
 
 
 
@@ -51,6 +53,10 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+const canWeDeliver = (zipcode) => deliveryAreaZipCodes.includes(zipcode) ? "You're in our delivery zone!" : "Sorry, we can't deliver to that address.";
+
+// console.log(canWeDeliver(85205));
+// console.log(canWeDeliver(90290));
 
 
 /* 
@@ -72,6 +78,18 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 // CODE HERE
 
+const canWeDeliverTwo  = (zipcode) => {
+    //set inital result to false;
+    let result = false;
+    //if any element in zipcode array equals given zipcode turn result to true
+    deliveryAreaZipCodes.forEach((element) => element === zipcode ? result = true : null)
+
+    //if no match result will be false and return Sorry, if true turn you're in
+    return result ? "You're in our delivery zone!" : "Sorry, we can't deliver to that address.";
+}
+
+console.log(canWeDeliverTwo(85205));
+console.log(canWeDeliverTwo(90290));
 
 //////////////////PROBLEM 3////////////////////
 /* 

@@ -211,7 +211,21 @@ const filteredFood = foodArr.filter((element) => element.tags.includes("gluten-f
 
 //CODE HERE
 
-
+const filterByProperty = (property,number,type) => {
+    if(property == "price" && type == "above"){
+        return foodArr.filter(element => element.price > number)
+    } else if (property == "price" && type == "below"){
+        return foodArr.filter(element => element.price < number)
+    } else if (property == "rating" && type == "above"){
+        return foodArr.filter(element => element.rating > number)
+    } else if (property == "rating" && type == "below"){
+        return foodArr.filter(element => element.rating < number)
+    } else if (property == "popularity" && type == "above"){
+        return foodArr.filter(element => element.popularity > number)
+    } else if (property == "popularity" && type == "below"){
+        return foodArr.filter(element => element.popularity < number)
+    }
+}
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -220,3 +234,7 @@ const filteredFood = foodArr.filter((element) => element.tags.includes("gluten-f
 */
 
 //CODE HERE
+
+//console.log(filterByProperty("price",10,"above"))
+//console.log(filterByProperty("price",10,"below"))
+console.log(filterByProperty("popularity",90,"above"))

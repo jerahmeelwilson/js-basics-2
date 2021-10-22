@@ -88,8 +88,8 @@ const canWeDeliverTwo  = (zipcode) => {
     return result ? "You're in our delivery zone!" : "Sorry, we can't deliver to that address.";
 }
 
-console.log(canWeDeliverTwo(85205));
-console.log(canWeDeliverTwo(90290));
+// console.log(canWeDeliverTwo(85205));
+// console.log(canWeDeliverTwo(90290));
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -126,6 +126,10 @@ const deals = [
 
 //CODE HERE
 
+deals[0].title = deals[0].title.replace("15","10");
+
+//console.log(deals);
+
 
 
 /*
@@ -142,3 +146,7 @@ const deals = [
 */
 
 //CODE HERE
+
+deals[1].desc = deals[1].desc.replace("March","April").trim();
+
+//console.log(deals);

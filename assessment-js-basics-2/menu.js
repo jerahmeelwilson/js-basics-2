@@ -32,6 +32,15 @@
 
 //CODE HERE
 
+const pizza = {
+    name: "Pepperoni",
+    price: 19.99,
+    category: "entree",
+    popularity: 100,
+    rating: 4.8,
+    tags: ["meat","cheesy","gluten-free"],
+};
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +52,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,6 +62,8 @@
 */
 
 //CODE HERE
+
+console.log(pizza.tags[1]);
 
 
 /*
@@ -64,6 +75,9 @@
 
 //CODE HERE
 
+let {price} = pizza;
+
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,6 +87,10 @@
 */
 
 //CODE HERE
+
+let {category} = pizza;
+
+console.log(category);
 
 
 //////////////////PROBLEM 3////////////////////
@@ -89,7 +107,48 @@
 
 //CODE HERE
 
-
+let foodArr = [
+    {
+        name: "Pepperoni",
+        price: 19.99,
+        category: "entree",
+        popularity: 100,
+        rating: 4.8,
+        tags: ["meat","cheesy","gluten-free"],
+    },
+    {
+        name: "Bread Sticks",
+        price: 5.99,
+        category: "appetizer",
+        popularity: 88,
+        rating: 3.9,
+        tags: ["garlic","buttery","gluten-free"],
+    },
+    {
+        name: "Spaghetti",
+        price: 9.99,
+        category: "entree",
+        popularity: 90,
+        rating: 4.5,
+        tags: ["meat","classic","pasta"],
+    },
+    {
+        name: "Ravioli",
+        price: 15.99,
+        category: "entree",
+        popularity: 95,
+        rating: 4,
+        tags: ["stuffed","pasta","gluten-free"],
+    },
+    {
+        name: "Salad",
+        price: 4.99,
+        category: "appetizer",
+        popularity: 70,
+        rating: 3,
+        tags: ["veggies","fresh"],
+    },
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,7 +164,9 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((element) => element.tags.includes("gluten-free"))
+
+//console.log(filteredFood);
 
 
 

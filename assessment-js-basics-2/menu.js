@@ -33,7 +33,7 @@
 //CODE HERE
 
 const pizza = {
-    name: "Pepperoni",
+    name :"Pepperoni",
     price: 19.99,
     category: "entree",
     popularity: 100,
@@ -77,7 +77,7 @@ console.log(pizza.tags[1]);
 
 let {price} = pizza;
 
-console.log(price);
+//console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -166,7 +166,7 @@ let foodArr = [
 
 const filteredFood = foodArr.filter((element) => element.tags.includes("gluten-free"))
 
-//console.log(filteredFood);
+console.log(filteredFood);
 
 
 

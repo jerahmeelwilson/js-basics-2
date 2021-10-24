@@ -35,8 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+ const summedPrice = cart.reduce((sum,element) => sum + element.price,0);
 
+ console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -55,7 +56,9 @@ const cart = [
 
 //CODE HERE
 
+const calcFinalPrice = (cartTotal,couponValue,tax) => (cartTotal * (tax+1) - couponValue).toFixed(2);
 
+console.log(calcFinalPrice(summedPrice,5,0.6));
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +82,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+    //name, for delivery of food we need a name of the customer so we can confirm we are deliver to right person, this would be a string because a name usually a noun 
+    //address, we would need an address to know where to deliver food, this would be an object because it usually has a few properties, for example, a street number, a street name, a zipcode, a city and a state.
+    //payment type, we would need to know how the customer is paying for the good, this would be a string ex: credit, debit, cash
+    //tip percentage, we would need a tip to describe how much a customer wants to tip , this be a number because tips are usually describes as percentage of total order.
 */
 
 /*
@@ -88,3 +94,16 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+    name: "Jerahmeel Wilson",
+    address: {
+        streetNumber: 123,
+        streetName: "Maple Road",
+        zipcode: 60930,
+        city: "Baton Rouge",
+        state:"Louisana"
+    },
+    paymentType: "credit",
+    tip: 0.15, 
+}
